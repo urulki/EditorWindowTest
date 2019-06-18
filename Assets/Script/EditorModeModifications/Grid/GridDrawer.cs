@@ -42,7 +42,7 @@ namespace EditorModeModifications.Grid
             {
                 if (lastMapSize == value) return;
                 lastMapSize = value;
-                DrawGrid(lastMapSize);
+               
             }
         }
         
@@ -73,24 +73,7 @@ namespace EditorModeModifications.Grid
             }
         }
 
-        void DrawGrid(int size)
-        {
-            foreach (var cellSetter in _gridHandler.GetComponentsInChildren<CellMatSetter>())
-            {
-                DestroyImmediate(cellSetter.gameObject);
-            }
-            if (size % 2 != 0) size--;
-            int scaledSize = size * tileScale*2;
-            for (int j = -scaledSize/2; j <= scaledSize/2; j+=tileScale*2)
-            {
-                for (int i = - scaledSize/2; i <= scaledSize/2; i+=tileScale*2)
-                {
-                    Vector3 tilePos = new Vector3(i,_gridHandler.position.y,j);
-                    GameObject go = Instantiate(_tilePreset, tilePos, Quaternion.identity, _gridHandler);
-                    go.name = _tilePreset.name + " ("+go.transform.localPosition.x+","+go.transform.localPosition.z+")";
-                }
-            }
-        }
+        
 
         void SaveAsPrefab(GameObject go)
         {
