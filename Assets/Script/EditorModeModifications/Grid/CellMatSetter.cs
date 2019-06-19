@@ -49,7 +49,7 @@ namespace EditorModeModifications.Grid
             
             RTRoad = LoadMyAsset(typeof(Material),"Materials/Grid/RTRoad.mat") as Material;
             
-            ThreeRoad = LoadMyAsset(typeof(Material),"Materials/Grid/3Road.mat") as Material;
+            ThreeRoad = LoadMyAsset(typeof(Material),"Materials/Grid/3RoadUp.mat") as Material;
             
             FourRoad = LoadMyAsset(typeof(Material),"Materials/Grid/4Road.mat") as Material;
         }

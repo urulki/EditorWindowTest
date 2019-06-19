@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dbdaf41-4ca3-4f7a-bfe8-1fbb8a2474a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.EditorWindowTest/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EditorWindowTest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EditorWindowTest/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EditorWindowTest/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EditorWindowTest/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EditorWindowTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EditorWindowTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ressources/Tile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ressources/Tile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/EditorModeModifications/Grid/GridDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EditorModeModifications/Grid/GridDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/TestWin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/GridSetterWindows.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/TestWin.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/GridSetterWindows.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/EditorModeModifications/Grid/CellMatSetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EditorModeModifications/Grid/CellMatSetter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/CellSetterWindows.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/CellSetterWindows.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +21,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/GridSetterWindows.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
+                <state relative-caret-position="375">
                   <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
                   <folding>
                     <marker date="1560936187281" expanded="true" signature="6:107" ph="..." />
@@ -53,38 +49,39 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/CellSetterWindows.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="27" column="81" selection-start-line="27" selection-start-column="81" selection-end-line="27" selection-end-column="81" />
+                <state relative-caret-position="255">
+                  <caret line="17" column="99" selection-start-line="17" selection-start-column="99" selection-end-line="17" selection-end-column="99" />
                   <folding>
-                    <marker date="1560937030266" expanded="true" signature="6:87" ph="..." />
-                    <marker date="1560937030266" expanded="true" signature="139:956" ph="{...}" />
-                    <marker date="1560937030266" expanded="true" signature="191:954" ph="{...}" />
-                    <marker date="1560937030266" expanded="true" signature="369:615" ph="{...}" />
-                    <marker date="1560937030266" expanded="true" signature="645:948" ph="{...}" />
-                    <marker date="1560937030266" expanded="true" signature="722:938" ph="{...}" />
+                    <marker date="1560952132590" expanded="true" signature="6:87" ph="..." />
+                    <marker date="1560952132590" expanded="true" signature="139:1175" ph="{...}" />
+                    <marker date="1560952132590" expanded="true" signature="191:1173" ph="{...}" />
+                    <marker date="1560952132590" expanded="true" signature="369:614" ph="{...}" />
+                    <marker date="1560952132590" expanded="true" signature="644:851" ph="{...}" />
+                    <marker date="1560952132590" expanded="true" signature="881:1167" ph="{...}" />
+                    <marker date="1560952132590" expanded="true" signature="942:1157" ph="{...}" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Assets/Script/EditorModeModifications/Grid/CellMatSetter.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="116">
+                <state relative-caret-position="1920">
                   <caret line="130" column="62" selection-start-line="130" selection-start-column="62" selection-end-line="130" selection-end-column="62" />
                   <folding>
-                    <marker date="1560937640043" expanded="false" signature="6:68" ph="..." />
-                    <marker date="1560937640043" expanded="true" signature="108:5984" ph="{...}" />
-                    <marker date="1560937640043" expanded="true" signature="204:5975" ph="{...}" />
-                    <marker date="1560937640043" expanded="true" signature="558:878" ph="{...}" />
-                    <marker date="1560937640043" expanded="true" signature="1005:1645" ph="{...}" />
-                    <marker date="1560937640043" expanded="true" signature="1675:1823" ph="{...}" />
-                    <marker date="1560937640043" expanded="true" signature="1854:2001" ph="{...}" />
-                    <marker date="1560937640043" expanded="true" signature="2040:5969" ph="{...}" />
-                    <marker date="1560937640043" expanded="true" signature="2080:5959" ph="{...}" />
+                    <marker date="1560947658061" expanded="false" signature="6:68" ph="..." />
+                    <marker date="1560947658061" expanded="true" signature="108:5986" ph="{...}" />
+                    <marker date="1560947658061" expanded="true" signature="204:5977" ph="{...}" />
+                    <marker date="1560947658061" expanded="true" signature="558:878" ph="{...}" />
+                    <marker date="1560947658061" expanded="true" signature="1005:1647" ph="{...}" />
+                    <marker date="1560947658061" expanded="true" signature="1677:1825" ph="{...}" />
+                    <marker date="1560947658061" expanded="true" signature="1856:2003" ph="{...}" />
+                    <marker date="1560947658061" expanded="true" signature="2042:5971" ph="{...}" />
+                    <marker date="1560947658061" expanded="true" signature="2082:5961" ph="{...}" />
                   </folding>
                 </state>
               </provider>
@@ -93,7 +90,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Assets/Script/EditorModeModifications/Base/EditorModificator.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
+                <state relative-caret-position="105">
                   <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
                   <folding>
                     <marker date="1560851695370" expanded="false" signature="6:51" ph="..." />
@@ -108,7 +105,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Assets/Script/EditorModeModifications/Grid/GridDrawer.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
+                <state relative-caret-position="900">
                   <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
                   <folding>
                     <marker date="1560930368978" expanded="false" signature="6:117" ph="..." />
@@ -130,7 +127,7 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/GridSetterWindows.cs">
               <provider selected="true" editor-type-id="text-editor">
@@ -182,8 +179,8 @@
         <option value="$PROJECT_DIR$/Assets/Script/EditorModeModifications/Grid/GridDrawer.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/TestWin.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/GridSetterWindows.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/CellSetterWindows.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/EditorModeModifications/Grid/CellMatSetter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/CellSetterWindows.cs" />
       </list>
     </option>
   </component>
@@ -198,39 +195,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
       <pane id="UnityExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="8711f2a6:AssetsRoot" />
-            </path>
-            <path>
-              <item name="" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="8711f2a6:AssetsRoot" />
-              <item name="Script" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="8711f2a6:AssetsRoot" />
-              <item name="Script" type="1045f7f1:UnityExplorerNode" />
-              <item name="EditorModeModifications" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="8711f2a6:AssetsRoot" />
-              <item name="Script" type="1045f7f1:UnityExplorerNode" />
-              <item name="EditorModeModifications" type="1045f7f1:UnityExplorerNode" />
-              <item name="WinEditor" type="1045f7f1:UnityExplorerNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
+      </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
       </pane>
       <pane id="FileSystemExplorer" />
       <pane id="AssemblyExplorer" />
@@ -286,11 +256,12 @@
       <updated>1560863139026</updated>
       <workItem from="1560863142917" duration="7241000" />
       <workItem from="1560929759764" duration="7012000" />
+      <workItem from="1560950777410" duration="1435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14253000" />
+    <option name="totallyTimeSpent" value="15688000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -304,12 +275,11 @@
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.06233351" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.06286628" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Statistic" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -327,13 +297,14 @@
       <window_info anchor="bottom" id="Terminal" order="14" />
       <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
       <window_info active="true" anchor="bottom" id="Build" order="16" visible="true" weight="0.32870865" />
-      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="bottom" id="Statistic" order="17" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +325,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Script/EditorModeModifications/Base/EditorModificator.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="105">
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
             <marker date="1560851695370" expanded="false" signature="6:51" ph="..." />
@@ -367,7 +338,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Script/EditorModeModifications/Grid/GridDrawer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="900">
           <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
           <folding>
             <marker date="1560930368978" expanded="false" signature="6:117" ph="..." />
@@ -387,7 +358,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/GridSetterWindows.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
+        <state relative-caret-position="375">
           <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
           <folding>
             <marker date="1560936187281" expanded="true" signature="6:107" ph="..." />
@@ -414,35 +385,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/CellSetterWindows.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Script/EditorModeModifications/Grid/CellMatSetter.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="81" selection-start-line="27" selection-start-column="81" selection-end-line="27" selection-end-column="81" />
+        <state relative-caret-position="1920">
+          <caret line="130" column="62" selection-start-line="130" selection-start-column="62" selection-end-line="130" selection-end-column="62" />
           <folding>
-            <marker date="1560937030266" expanded="true" signature="6:87" ph="..." />
-            <marker date="1560937030266" expanded="true" signature="139:956" ph="{...}" />
-            <marker date="1560937030266" expanded="true" signature="191:954" ph="{...}" />
-            <marker date="1560937030266" expanded="true" signature="369:615" ph="{...}" />
-            <marker date="1560937030266" expanded="true" signature="645:948" ph="{...}" />
-            <marker date="1560937030266" expanded="true" signature="722:938" ph="{...}" />
+            <marker date="1560947658061" expanded="false" signature="6:68" ph="..." />
+            <marker date="1560947658061" expanded="true" signature="108:5986" ph="{...}" />
+            <marker date="1560947658061" expanded="true" signature="204:5977" ph="{...}" />
+            <marker date="1560947658061" expanded="true" signature="558:878" ph="{...}" />
+            <marker date="1560947658061" expanded="true" signature="1005:1647" ph="{...}" />
+            <marker date="1560947658061" expanded="true" signature="1677:1825" ph="{...}" />
+            <marker date="1560947658061" expanded="true" signature="1856:2003" ph="{...}" />
+            <marker date="1560947658061" expanded="true" signature="2042:5971" ph="{...}" />
+            <marker date="1560947658061" expanded="true" signature="2082:5961" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Script/EditorModeModifications/Grid/CellMatSetter.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Script/EditorModeModifications/WinEditor/CellSetterWindows.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="130" column="62" selection-start-line="130" selection-start-column="62" selection-end-line="130" selection-end-column="62" />
+        <state relative-caret-position="255">
+          <caret line="17" column="99" selection-start-line="17" selection-start-column="99" selection-end-line="17" selection-end-column="99" />
           <folding>
-            <marker date="1560937640043" expanded="false" signature="6:68" ph="..." />
-            <marker date="1560937640043" expanded="true" signature="108:5984" ph="{...}" />
-            <marker date="1560937640043" expanded="true" signature="204:5975" ph="{...}" />
-            <marker date="1560937640043" expanded="true" signature="558:878" ph="{...}" />
-            <marker date="1560937640043" expanded="true" signature="1005:1645" ph="{...}" />
-            <marker date="1560937640043" expanded="true" signature="1675:1823" ph="{...}" />
-            <marker date="1560937640043" expanded="true" signature="1854:2001" ph="{...}" />
-            <marker date="1560937640043" expanded="true" signature="2040:5969" ph="{...}" />
-            <marker date="1560937640043" expanded="true" signature="2080:5959" ph="{...}" />
+            <marker date="1560952132590" expanded="true" signature="6:87" ph="..." />
+            <marker date="1560952132590" expanded="true" signature="139:1175" ph="{...}" />
+            <marker date="1560952132590" expanded="true" signature="191:1173" ph="{...}" />
+            <marker date="1560952132590" expanded="true" signature="369:614" ph="{...}" />
+            <marker date="1560952132590" expanded="true" signature="644:851" ph="{...}" />
+            <marker date="1560952132590" expanded="true" signature="881:1167" ph="{...}" />
+            <marker date="1560952132590" expanded="true" signature="942:1157" ph="{...}" />
           </folding>
         </state>
       </provider>

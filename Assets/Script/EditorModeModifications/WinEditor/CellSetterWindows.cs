@@ -15,16 +15,22 @@ namespace Script.EditorModeModifications.WinEditor
         static void Init()
         {
             // Get existing open window or if none, make a new one:
-            CellSetterWindows window = (CellSetterWindows) GetWindow(typeof(CellSetterWindows),false,"Cell Setter" );
+            CellSetterWindows window = (CellSetterWindows) GetWindow(typeof(CellSetterWindows),true,"Cell Setter" );
             window.Show();
             
         }
 
         private void OnGUI()
         {
-            if (CellToModif == null || currentCell != CellToModif)
+            CellToModif = (GameObject) EditorGUILayout.ObjectField("Current Tile", CellToModif, typeof(GameObject),true);
+            Selection.selectionChanged += () => setActiveTile();
+        }
+
+        void setActiveTile()
+        {
+            if(Selection.activeGameObject != null)
             {
-                GameObject cGo =  Selection.activeGameObject;
+                GameObject cGo = Selection.activeGameObject;
                 if (cGo.GetComponent<CellMatSetter>() != null) CellToModif = cGo; 
                 currentCell = CellToModif;
             }
