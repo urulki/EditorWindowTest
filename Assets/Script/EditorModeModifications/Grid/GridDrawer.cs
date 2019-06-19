@@ -68,30 +68,14 @@ namespace EditorModeModifications.Grid
             MapSize = Size;
             if (Save)
             {
-                SaveAsPrefab(gameObject);
+                
                 Save = false;
             }
         }
 
         
 
-        void SaveAsPrefab(GameObject go)
-        {
-            
-
-            foreach (var setter in go.GetComponentsInChildren<CellMatSetter>())
-            {
-                DestroyImmediate(setter);
-            }
-
-            GameObject prefab = Instantiate(go, Vector3.zero, Quaternion.identity);
-            prefab.name = go.name + " Prefab";
-            string localPath = path + "Prefabs/Grid/" + prefab.name + ".prefab";
-            DestroyImmediate(prefab.GetComponent<GridDrawer>());
-            PrefabUtility.SaveAsPrefabAsset(prefab, localPath,out succed);
-            DestroyImmediate(prefab);
-            succed = false;
-        }
+        
     }
 #endif
 }

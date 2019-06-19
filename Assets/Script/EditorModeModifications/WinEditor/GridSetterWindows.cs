@@ -1,12 +1,13 @@
-﻿using EditorModeModifications.Grid;
+﻿using System.Collections.Generic;
+using EditorModeModifications.Grid;
 using UnityEditor;
 using UnityEngine;
 
 namespace Script.EditorModeModifications.WinEditor
 {
-    public class TestWin : EditorWindow
+    public class GridSetterWindows : EditorWindow
     {
-        string myString = "Grid";
+        string prefabName = "Grid";
         bool groupEnabled;
         private float CellSize =1;
         private float cellX = 1;
@@ -15,17 +16,22 @@ namespace Script.EditorModeModifications.WinEditor
         private int gridSize =1;
         private int multiplicator = 1;
         private Object cellType;
+        private Object SaveDestinationFile;
         private bool Preview;
         private bool Clear;
+        private bool Save;
         private static GameObject grid;
         private GameObject tile;
-        
+        private bool succed;
+        private string targetpath;
+        private List<CellMatSetter> cellSetter = new List<CellMatSetter>();
+
         // Add menu named "My Window" to the Window menu
         [MenuItem("Tool/3DTilling/Grid Setter")]
         static void Init()
         {
             // Get existing open window or if none, make a new one:
-            TestWin window = (TestWin)GetWindow(typeof(TestWin),false,"Grid Setter" );
+            GridSetterWindows window = (GridSetterWindows)GetWindow(typeof(GridSetterWindows),false,"Grid Setter" );
             window.Show();
             if(GameObject.Find("Grid") == null)grid = new GameObject("Grid");
         }
@@ -34,9 +40,10 @@ namespace Script.EditorModeModifications.WinEditor
         void OnGUI()
         {
             GUILayout.Label("World Settings", EditorStyles.boldLabel);
-            myString = EditorGUILayout.TextField("PrefabName", myString);
+            prefabName = EditorGUILayout.TextField("PrefabName", prefabName);
             gridSize = EditorGUILayout.IntField("Grid Size", gridSize);
             cellType = EditorGUILayout.ObjectField("Cell Preset", cellType, typeof(GameObject), false);
+            SaveDestinationFile =EditorGUILayout.ObjectField("Target Folder", SaveDestinationFile, typeof(Object), false);
             multiplicator =EditorGUILayout.IntField("Cell Size Multiplicator", multiplicator);
             
             groupEnabled = EditorGUILayout.BeginToggleGroup("Optional Settings", groupEnabled);
@@ -49,31 +56,36 @@ namespace Script.EditorModeModifications.WinEditor
 
             Preview = GUILayout.Button("Preview Grid");
             Clear = GUILayout.Button("Clear Grid");
-            if (cellType !=null && tile == null)
-            {
-                tile = (GameObject)cellType;
-            }
-
+            Save = GUILayout.Button("Save Grid");
+            if (multiplicator < 1) multiplicator = 1;
+            if (cellType !=null && tile == null) tile = (GameObject)cellType;
             if (cellType !=null)
             {
-                if(groupEnabled)tile.transform.localScale = new Vector3(cellX,cellY,cellZ);
-                else tile.transform.localScale = new Vector3(1,0.2f,1);    
+                if(groupEnabled)tile.transform.localScale = new Vector3(cellX*multiplicator,cellY,cellZ*multiplicator);
+                else tile.transform.localScale = new Vector3(multiplicator,0.2f,multiplicator);    
             }
             if (Preview && cellType !=null)
             {
-                
                 if (GameObject.Find("Grid")==null) grid = new GameObject("Grid");
                 if(tile.GetComponent<CellMatSetter>() == null)tile.AddComponent<CellMatSetter>();
-                Debug.Log(tile.GetComponent<CellMatSetter>());
+                Debug.Log(targetpath);
                 DrawGrid(gridSize);
             }
+            
             if (grid == null) grid = GameObject.Find("Grid");
             if (Clear) ClearGrid();
+            if (SaveDestinationFile !=null && targetpath == null)
+            {
+                targetpath = AssetDatabase.GetAssetPath(SaveDestinationFile);
+                
+            }
+            if(Save && SaveDestinationFile !=null) SaveAsPrefab(grid);
         }
         void DrawGrid(int size)
         {
             Debug.Log(grid);
             Debug.Log(groupEnabled);
+            cellSetter.Clear();
             foreach (var cellSetter in grid.GetComponentsInChildren<CellMatSetter>())
             {
                 DestroyImmediate(cellSetter.gameObject);
@@ -90,13 +102,14 @@ namespace Script.EditorModeModifications.WinEditor
                         Vector3 tilePos = new Vector3(i,grid.transform.position.y,j);
                         GameObject go = (GameObject) Instantiate(tile, tilePos, Quaternion.identity, grid.transform);
                         go.name = tile.name + " ("+go.transform.localPosition.x+","+go.transform.localPosition.z+")";
+                        cellSetter.Add(go.GetComponent<CellMatSetter>());
                     }
                 }
             }
             else
             {
-                float tileScaleX = CellSize;
-                float tileScaleZ = CellSize;
+                float tileScaleX = cellX;
+                float tileScaleZ = cellZ;
                 float scaledSizeX = size * tileScaleX*multiplicator;
                 float scaledSizeZ = size * tileScaleZ*multiplicator;
                 
@@ -107,9 +120,29 @@ namespace Script.EditorModeModifications.WinEditor
                         Vector3 tilePos = new Vector3(i,grid.transform.position.y,j);
                         GameObject go = Instantiate(tile, tilePos, Quaternion.identity, grid.transform);
                         go.name = tile.name + " ("+go.transform.localPosition.x+","+go.transform.localPosition.z+")";
+                        cellSetter.Add(go.GetComponent<CellMatSetter>());
                     }
                 }
             }
+        }
+        
+        void SaveAsPrefab(GameObject go)
+        {
+             
+
+            foreach (var setter in go.GetComponentsInChildren<CellMatSetter>())
+            {
+                DestroyImmediate(setter);
+            }
+
+            GameObject prefab = Instantiate(go, Vector3.zero, Quaternion.identity);
+            prefab.name = prefabName;
+            string localPath = targetpath+ "/" + prefab.name + ".prefab";
+            DestroyImmediate(prefab.GetComponent<GridDrawer>());
+            PrefabUtility.SaveAsPrefabAsset(prefab, localPath,out succed);
+            DestroyImmediate(prefab);
+            DestroyImmediate(go);
+            succed = false;
         }
 
         void ClearGrid()
