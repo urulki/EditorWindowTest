@@ -45,9 +45,9 @@ namespace EditorModeModifications.Grid
             
             StrRoad = LoadMyAsset(typeof(Material),"Materials/Grid/StrRoad.mat") as Material;
             
-            LTRoad = LoadMyAsset(typeof(Material),"Materials/Grid/LTRoad.mat") as Material;
+            LTRoad = LoadMyAsset(typeof(Material),"Materials/Grid/LURoad.mat") as Material;
             
-            RTRoad = LoadMyAsset(typeof(Material),"Materials/Grid/RTRoad.mat") as Material;
+            RTRoad = LoadMyAsset(typeof(Material),"Materials/Grid/RURoad.mat") as Material;
             
             ThreeRoad = LoadMyAsset(typeof(Material),"Materials/Grid/3RoadUp.mat") as Material;
             

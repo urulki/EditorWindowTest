@@ -1,16 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using EditorModeModifications.Grid;
 using UnityEditor;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Script.EditorModeModifications.WinEditor
 {
     public class CellSetterWindows : EditorWindow
     {
-        public GameObject CellToModif;
+        public GameObject cellToModif;
         public GameObject currentCell;
-        
-        
+        public Material baseMat;
+        public List<Texture> Textures = new List<Texture>();
+        public List<Material> materialInstances = new List<Material>();
+        public Object TargetTextureFolder;
+
         [MenuItem("Tool/3DTilling/Cell Setter")]
         static void Init()
         {
@@ -22,17 +28,37 @@ namespace Script.EditorModeModifications.WinEditor
 
         private void OnGUI()
         {
-            CellToModif = (GameObject) EditorGUILayout.ObjectField("Current Tile", CellToModif, typeof(GameObject),true);
-            Selection.selectionChanged += () => setActiveTile();
+            GUILayout.Label("Cell Settings",EditorStyles.boldLabel);
+            TargetTextureFolder =
+                EditorGUILayout.ObjectField("Texture to apply to materials", TargetTextureFolder, typeof(Object));
+            cellToModif = (GameObject) EditorGUILayout.ObjectField("Current Tile", cellToModif, typeof(GameObject),true);
+            baseMat = (Material) EditorGUILayout.ObjectField("Base Material", baseMat, typeof(Material), false);
+
+            Selection.selectionChanged += () => SetActiveTile();
         }
 
-        void setActiveTile()
+        void SetActiveTile()
         {
             if(Selection.activeGameObject != null)
             {
                 GameObject cGo = Selection.activeGameObject;
-                if (cGo.GetComponent<CellMatSetter>() != null) CellToModif = cGo; 
-                currentCell = CellToModif;
+                if (cGo.GetComponent<CellMatSetter>() != null) cellToModif = cGo; 
+                currentCell = cellToModif;
+            }
+        }
+
+        void MatCreator()
+        {
+            foreach (var text in AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(TargetTextureFolder)))
+            {
+                Textures.Add((Texture) text);
+            }
+
+            foreach (var texture in Textures)
+            { 
+                Material mat = new Material(baseMat);
+                mat.mainTexture = texture;
+                materialInstances.Add(mat);
             }
         }
     }

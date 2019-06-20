@@ -101,7 +101,7 @@ namespace Script.EditorModeModifications.WinEditor
                     {
                         Vector3 tilePos = new Vector3(i,grid.transform.position.y,j);
                         GameObject go = (GameObject) Instantiate(tile, tilePos, Quaternion.identity, grid.transform);
-                        go.name = tile.name + " ("+go.transform.localPosition.x+","+go.transform.localPosition.z+")";
+                        go.name = tile.name + " ("+go.transform.localPosition.x+"/"+go.transform.localPosition.z+")";
                         cellSetter.Add(go.GetComponent<CellMatSetter>());
                     }
                 }
@@ -119,7 +119,7 @@ namespace Script.EditorModeModifications.WinEditor
                     {
                         Vector3 tilePos = new Vector3(i,grid.transform.position.y,j);
                         GameObject go = Instantiate(tile, tilePos, Quaternion.identity, grid.transform);
-                        go.name = tile.name + " ("+go.transform.localPosition.x+","+go.transform.localPosition.z+")";
+                        go.name = tile.name + " ("+go.transform.localPosition.x+"/"+go.transform.localPosition.z+")";
                         cellSetter.Add(go.GetComponent<CellMatSetter>());
                     }
                 }
